@@ -115,6 +115,7 @@ import org.web3j.abi.datatypes.primitive.Float;
 import org.web3j.abi.datatypes.primitive.Int;
 import org.web3j.abi.datatypes.primitive.Long;
 import org.web3j.abi.datatypes.primitive.Short;
+import org.web3j.abi.datatypes.DynamicStruct;
 
 /**
  * Maps Solidity types to web3j data types, allowing to use Java primitive types for numbers. The
@@ -363,6 +364,8 @@ public final class AbiTypes {
                 return Bytes31.class;
             case "bytes32":
                 return Bytes32.class;
+            case "tuple":
+                return DynamicStruct.class;
             default:
                 {
                     try {
